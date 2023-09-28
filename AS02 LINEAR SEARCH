@@ -1,0 +1,17 @@
+Array = [2, 4, 8, 5, 2, 3, 9]
+ValueToFind = int(input("What number would you like to find? "))
+Found = False
+Index = 0
+#length of array is 7
+#max index is 6
+#therefore last index will be checked as 6 < 7
+
+while Found == False and Index < len(Array): #both conditions must be fulfilled 
+    if Array[Index] == ValueToFind:
+        Found = True
+        print ("Value has been found at position " + str(Index))
+    else:
+        Index = Index + 1
+
+if Found == False: #this will only be carried out once while loop ends #index will be > length
+    print ("Value not in array")
